@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김현지 웹퍼블리셔 포트폴리오</title>
+
+    <!-- 브라우저 초기화 reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.5.1/css/reset.min.css">
+    <!-- reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- scroll Magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- js -->
+    <script defer src="js/main.js"></script>
+    <!-- js -->
+
+
+</head>
+
+<body>
+    <!-- 0) HEADER-------------------------- -->
+    <header>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1><a href="/">KIM HYEONJI</a></h1>
+
+            <!-- PC 메뉴 -->
+            <nav id="gnb-pc">
+                <ul class="main-menu">
+                    <li class="hover-line"><a href="#section0">HOME,</a></li>
+                    <li class="hover-line"><a href="#section1">PORTFOLIO,</a></li>
+                    <li class="hover-line"><a href="#section2">SKILL,</a></li>
+                    <li class="hover-line"><a href="#section3">ABOUT,</a></li>
+                    <!-- 깃허브 바로가기 -->
+                    <li class="link">
+                        <a href="https://github.com/ji1128" target="_blank">
+                            <div class="btn btn--white">Git Hub</div>
+                        </a>
+                    </li>
+                    <!-- 블로그 바로가기 -->
+                    <li class="link">
+                        <a href="https://blog.naver.com/ji8936" target="_blank">
+                            <div class="btn btn--black">Blog</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- MO & Tab 메뉴 -->
+            <div class="overlay">
+                <nav id="gnb-mo">
+                    <ul class="mainMenu">
+                        <li class="hover-line"><a href="#section0">HOME</a></li>
+                        <li class="hover-line"><a href="#section1">PORTFOLIO</a></li>
+                        <li class="hover-line"><a href="#section2">SKILL</a></li>
+                        <li class="hover-line"><a href="#section3">ABOUT</a></li>
+                        <!-- 깃허브 바로가기 -->
+                        <li class="link">
+                            <a href="https://github.com/ji1128" target="_blank">
+                                <div class="btn btn--white">Git Hub</div>
+                            </a>
+                        </li>
+                        <!-- 블로그 바로가기 -->
+                        <li class="link">
+                            <a href="https://blog.naver.com/ji8936" target="_blank">
+                                <div class="btn btn--black">Blog</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- menu-toggle-btn -->
+            <div class="menu-toggle-btn">
+                <div id="one"></div>
+                <div id="two"></div>
+                <div id="three"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="fullpage">
+        <!-- 1) intro-------------------------- -->
+        <section class="section scroll-spy" id="section0">
+            <div class="inner">
+                <div class="intro">
+                    <!-- 제목 -->
+                    <h1 class="back-to-position to-up delay-0">WELCOME <br>TO<br>MY PORTFOLIO</h1>
+                    <!-- 타이핑 효과 TXT "웹 퍼블리셔 김현지 입니다" -->
+                    <h3 class="txt back-to-position to-up delay-1"></h3>
+
+                    <!-- 능력 소개 -->
+                    <div class="introduction back-to-position to-up delay-1">
+                        <span>${ </span>
+                        <div class="intro-txt">
+                            <ul>
+                                <li>/Flexible Thinking</li>
+                                <li>/Creative thinking</li>
+                                <li>/Communication skills</li>
+                                <li>/Problem-solving skills</li>
+                            </ul>
+                        </div>
+                        <span> }</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) PORTFOLIO-------------------------- -->
+        <section class="section scroll-spy" id="section1">
+            <h2>${ PORTFOLIO }</h2>
+            <div class="swiper mySwiper back-to-position to-up ">
+                <div class="swiper-wrapper">
+                    <!-- 작품 1) A'ddict -->
+                    <div class="swiper-slide slide slide0">
+                        <div class="slide-inner addict">
+                            <div class="inner">
+                                <!-- 상단 타이틀 -->
+                                <div class="pf-head-title">
+                                    <p>01 /</p>
+                                    <p>RESPONSIVE Clone Coding</p>
+                                </div>
+
+                                <!-- 이미지 -->
+                                <div class="pf-img"></div>
+
+                                <!-- 내용 box -->
+                                <div class="right">
+                                    <div class="txt-container">
+                                        <!-- 제목 -->
+                                        <div class="pf-title addict">
+                                            <h2>A'ddict</h2>
+                                            <span>RESPONSIVE Clone Coding</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 본문 내용 -->
+                                    <div class="pf-txt">
+                                        <!-- 브랜드 타입 -->
+                                        <div class="txt-brand">
+                                            <p>향수 브랜드</p>
+                                            <span>(포트폴리오용)</span>
+                                            <span></span>
+                                        </div>
+
+                                        <!-- 사용기술 & 사용프로그램 -->
+                                        <ul class="txt-cont txt-use">
+                                            <li>
+                                                <p>사용기술</p>
+                                                <span>HTML5, CSS3, Javascript</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>사용프로그램</p>
+                                                <span>Figma, Photoshop, Visual Studio</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 참여도 & 제작기간 & TPYE -->
+                                        <ul class="txt-cont txt-info">
+                                            <li>
+                                                <p>참여도</p>
+                                                <span>본인 100%</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>제작기간</p>
+                                                <span>2 주</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>TYPE</p>
+                                                <span>반응형 웹</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 페이지구성 -->
+                                        <div class="txt-cont txt-page">
+                                            <p>페이지구성</p>
+                                            <span>메인 페이지</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="txt-btn">
+                                        <input type="button" value="ORIGINAL SITE"
+                                            onclick="window.open('https://ji1128.github.io/A-ddict/')"
+                                            class="btn-original">
+                                        <a href="./images/report/addict-report.png"
+                                            onclick="window.open(this.href, '_blank', 'width=980, height=800, top=80, left=400, resizable=yes, scrollbars=yes'); return false;">
+                                            <div>→</div>
+                                            <p>REPORT</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 작품 2) STARBUCKS -->
+                    <div class="swiper-slide slide slide1">
+                        <div class="slide-inner starbucks">
+                            <div class="inner">
+                                <!-- 상단 타이틀 -->
+                                <div class="pf-head-title">
+                                    <p>02 /</p>
+                                    <p>Clone Coding</p>
+                                </div>
+
+                                <!-- 이미지 -->
+                                <div class="pf-img"></div>
+
+                                <!-- 내용 box -->
+                                <div class="right">
+                                    <div class="txt-container">
+                                        <!-- 제목 -->
+                                        <div class="pf-title addict">
+                                            <h2>STARBUCKS</h2>
+                                            <span>Clone Coding</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 본문 내용 -->
+                                    <div class="pf-txt">
+                                        <!-- 브랜드 타입 -->
+                                        <div class="txt-brand">
+                                            <p>프랜차이즈 카페</p>
+                                            <span>(포트폴리오용)</span>
+                                            <span></span>
+                                        </div>
+
+                                        <!-- 사용기술 & 사용프로그램 -->
+                                        <ul class="txt-cont txt-use">
+                                            <li>
+                                                <p>사용기술</p>
+                                                <span>HTML5, CSS3, Javascript</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>사용프로그램</p>
+                                                <span>Figma, Photoshop, Visual Studio</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 참여도 & 제작기간 & TPYE -->
+                                        <ul class="txt-cont txt-info">
+                                            <li>
+                                                <p>참여도</p>
+                                                <span>본인 100%</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>제작기간</p>
+                                                <span>3 일</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>TYPE</p>
+                                                <span>PC형 웹</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 페이지구성 -->
+                                        <div class="txt-cont txt-page">
+                                            <p>페이지구성</p>
+                                            <span>메인 페이지</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="txt-btn">
+                                        <input type="button" value="ORIGINAL SITE"
+                                            onclick="window.open('https://ji1128.github.io/starbucks-new/')"
+                                            class="btn-original">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 작품 3) SEPHORA -->
+                    <div class="swiper-slide slide slide2">
+                        <div class="slide-inner sephora">
+                            <div class="inner">
+                                <!-- 상단 타이틀 -->
+                                <div class="pf-head-title">
+                                    <p>3 /</p>
+                                    <p>Clone Coding</p>
+                                </div>
+
+                                <!-- 이미지 -->
+                                <div class="pf-img"></div>
+
+                                <!-- 내용 box -->
+                                <div class="right">
+                                    <div class="txt-container">
+                                        <!-- 제목 -->
+                                        <div class="pf-title addict">
+                                            <h2>SEPHORA</h2>
+                                            <span>Clone Coding</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 본문 내용 -->
+                                    <div class="pf-txt">
+                                        <!-- 브랜드 타입 -->
+                                        <div class="txt-brand">
+                                            <p>프랑스 화장품 종합 편집샵</p>
+                                            <span>(포트폴리오용)</span>
+                                            <span></span>
+                                        </div>
+
+                                        <!-- 사용기술 & 사용프로그램 -->
+                                        <ul class="txt-cont txt-use">
+                                            <li>
+                                                <p>사용기술</p>
+                                                <span>HTML5, CSS3, Javascript</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>사용프로그램</p>
+                                                <span>Figma, Photoshop, Visual Studio</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 참여도 & 제작기간 & TPYE -->
+                                        <ul class="txt-cont txt-info">
+                                            <li>
+                                                <p>참여도</p>
+                                                <span>본인 100%</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>제작기간</p>
+                                                <span>2 주</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>TYPE</p>
+                                                <span>PC형 웹</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 페이지구성 -->
+                                        <div class="txt-cont txt-page">
+                                            <p>페이지구성</p>
+                                            <span>메인 페이지</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="txt-btn">
+                                        <input type="button" value="ORIGINAL SITE"
+                                            onclick="window.open('https://ji1128.github.io/sephora/')" class="btn-original">
+                                        <a href="#">
+                                            <div>→</div>
+                                            <p>REPORT</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 작품 4) PlantLife UXUI -->
+                    <div class="swiper-slide slide slide3">
+                        <div class="slide-inner uxui">
+                            <div class="inner">
+                                <!-- 상단 타이틀 -->
+                                <div class="pf-head-title">
+                                    <p>04 /</p>
+                                    <p>UX/UI Design</p>
+                                </div>
+
+                                <!-- 이미지 -->
+                                <div class="pf-img"></div>
+
+                                <!-- 내용 box -->
+                                <div class="right">
+                                    <div class="txt-container">
+                                        <!-- 제목 -->
+                                        <div class="pf-title addict">
+                                            <h2>PlantLife</h2>
+                                            <span>UX/UI Design</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 본문 내용 -->
+                                    <div class="pf-txt">
+                                        <!-- 브랜드 타입 -->
+                                        <div class="txt-brand">
+                                            <p>향수 브랜드</p>
+                                            <span>(포트폴리오용)</span>
+                                            <span></span>
+                                        </div>
+
+                                        <!-- 사용기술 & 사용프로그램 -->
+                                        <ul class="txt-cont txt-use">
+                                            <li>
+                                                <p>사용프로그램</p>
+                                                <span>Figma, Photoshop, Illustration</span>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 참여도 & 제작기간 & TPYE -->
+                                        <ul class="txt-cont txt-info">
+                                            <li>
+                                                <p>참여도</p>
+                                                <span>본인 100%</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>제작기간</p>
+                                                <span>2 주</span>
+                                            </li>
+                                            <li class="slash">/</li>
+                                            <li>
+                                                <p>TYPE</p>
+                                                <span>UX / UI design</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="txt-btn">
+                                        <a href="./images/report/plantlife-report.png"
+                                            onclick="window.open(this.href, '_blank', 'width=980, height=800, top=80, left=400, scrollbars=yes, resizable=yes'); return false;">
+                                            <div>→</div>
+                                            <p>REPORT</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+            <!-- swiper 페이저 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="section scroll-spy" id="section5">
+        <h2>${ PORTFOLIO }</h2>
+        <div class="swiper mySwiper back-to-position to-up">
+            <div class="swiper-wrapper">
+                <!-- 디자인 작품 1) 그린컴퓨터 배너 -->
+                <div class="swiper-slide slide">
+                    <div class="slide-inner od01">
+                        <div class="inner">
+                            <!-- 상단 타이틀 -->
+                            <div class="pf-head-title">
+                                <p>05 /</p>
+                                <p>Other Design</p>
+                            </div>
+
+                            <!-- 이미지 & 텍스트 area -->
+                            <div class="img-txt-area">
+                                <!-- 이미지 -->
+                                <div class="img-box"></div>
+
+                                <!-- 텍스트 -->
+                                <div class="txt-box">
+                                    <h4>
+                                        <strong>안산그린컴퓨터아카데미</strong><br>
+                                        할인 이벤트 팝업 시안 제작
+                                    </h4>
+                                    <div class="pc-txt-cont">
+                                        <ul>
+                                            <li>
+                                                <p>키워드</p>
+                                                <span>심플한 / 통일된 / 할인율 강조</span>
+                                            </li>
+                                            <li>
+                                                <p>기획의도</p>
+                                                <span>할인율이 눈에 확 들어오는 구성과<br>
+                                                    파란색 계열의 색상만을 사용하여 심플하게 디자인</span>
+                                            </li>
+                                            <li>
+                                                <p>서체</p>
+                                                <span>a바른생각 / a아시아헤드 / 시월구일</span>
+                                            </li>
+                                            <li>
+                                                <div class="txt-btn">
+                                                    <a class="btn-original" href="./otherdesign01.html" onclick="window.open(this.href, '_blank', 'width=750px, height=550, top=80, left=400, resizable=yes, scrollbars=yes'); return false;">SEE MORE</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 디자인 작품 2) 토익 배너 -->
+                <div class="swiper-slide slide">
+                    <div class="slide-inner od02">
+                        <div class="inner">
+                            <!-- 상단 타이틀 -->
+                            <div class="pf-head-title">
+                                <p>05 /</p>
+                                <p>Other Design</p>
+                            </div>
+
+                            <!-- 이미지 & 텍스트 area -->
+                            <div class="img-txt-area">
+                                <!-- 이미지 -->
+                                <div class="img-box"></div>
+
+                                <!-- 텍스트 -->
+                                <div class="txt-box">
+                                    <h4>
+                                        <strong>토익환급코스</strong><br>
+                                        팝업 시안 제작
+                                    </h4>
+                                    <div class="pc-txt-cont">
+                                        <ul>
+                                            <li>
+                                                <p>키워드</p>
+                                                <span>깔끔한 / 가독성 높게</span>
+                                            </li>
+                                            <li>
+                                                <p>기획의도</p>
+                                                <span>보색 대비를 사용하여<br>
+                                                    눈에 확 띄는 색상 선정으로 가독성 높힘
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>서체</p>
+                                                <span>시월구일굴림2 / a아시아헤드2</span>
+                                            </li>
+                                            <li>
+                                                <div class="txt-btn">
+                                                    <a class="btn-original" href="./otherdesign02.html" onclick="window.open(this.href, '_blank', 'width=500, height=500, top=80, left=400, resizable=yes, scrollbars=yes'); return false;">SEE MORE</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 디자인 작품 3) 캔들 사이트 -->
+                <div class="swiper-slide slide">
+                    <div class="slide-inner od03">
+                        <div class="inner">
+                            <!-- 상단 타이틀 -->
+                            <div class="pf-head-title">
+                                <p>05 /</p>
+                                <p>Other Design</p>
+                            </div>
+
+                            <!-- 이미지 & 텍스트 area -->
+                            <div class="img-txt-area">
+                                <!-- 이미지 -->
+                                <div class="img-box"></div>
+
+                                <!-- 텍스트 -->
+                                <div class="txt-box">
+                                    <h4>
+                                        <strong>캔들 웍스</strong><br>
+                                        리뉴얼 디자인 제작
+                                    </h4>
+                                    <div class="pc-txt-cont">
+                                        <ul>
+                                            <li>
+                                                <p>키워드</p>
+                                                <span>화사한/ 편의성 증대</span>
+                                            </li>
+                                            <li>
+                                                <p>기획의도</p>
+                                                <span>기존의 제품이 나열된 디자인에서<br>
+                                                    주력 상품이 한 눈에 들어올 수 있게 편의성을 증대시켜 제작</span>
+                                            </li>
+                                            <li>
+                                                <div class="txt-btn">
+                                                    <a class="btn-original" href="./otherdesign03.html" onclick="window.open(this.href, '_blank', 'width=800, height=800, top=80, left=400, resizable=yes, scrollbars=yes'); return false;">SEE MORE</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 디자인 작품 4) FASTBOX 사이트 -->
+                <div class="swiper-slide slide">
+                    <div class="slide-inner od04">
+                        <div class="inner">
+                            <!-- 상단 타이틀 -->
+                            <div class="pf-head-title">
+                                <p>05 /</p>
+                                <p>Other Design</p>
+                            </div>
+
+                            <!-- 이미지 & 텍스트 area -->
+                            <div class="img-txt-area">
+                                <!-- 이미지 -->
+                                <div class="img-box"></div>
+
+                                <!-- 텍스트 -->
+                                <div class="txt-box">
+                                    <h4>
+                                        <strong>안산그린컴퓨터아카데미</strong><br>
+                                        할인 이벤트 팝업 시안 제작
+                                    </h4>
+                                    <div class="pc-txt-cont">
+                                        <ul>
+                                            <li>
+                                                <p>키워드</p>
+                                                <span>심플한 / 통일된 / 할인율 강조</span>
+                                            </li>
+                                            <li>
+                                                <p>기획의도</p>
+                                                <span>할인율이 눈에 확 들어오는 구성과<br>
+                                                    파란색 계열의 색상만을 사용하여 심플하게 디자인</span>
+                                            </li>
+                                            <li>
+                                                <p>서체</p>
+                                                <span>a바른생각 / a아시아헤드 / 시월구일</span>
+                                            </li>
+                                            <li>
+                                                <div class="txt-btn">
+                                                    <a class="btn-original" href="./otherdesign01.html" onclick="window.open(this.href, '_blank', 'width=750px, height=550, top=80, left=400, resizable=yes, scrollbars=yes'); return false;">SEE MORE</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 3) MY SKILLS-------------------------- -->
+    <section class="section scroll-spy" id="section2">
+        <div class="inner">
+            <div class="pc-skill back-to-position to-up delay-0">
+                <h2>${ MY SKILLS }</h2>
+                <!-- 오른쪽 % 박스 -->
+                <div class="skill-box">
+                    <div class="right">
+                        <div class="circle">
+                            <div class="right-txt">
+                                <h2 id="skill">?</h2>
+                                <span>%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 왼쪽 txt 박스 -->
+                    <div class="left">
+                        <div class="left-inner">
+                            <!-- 코딩 스킬 -->
+                            <div class="left-skill-box coding-box">
+                                <h3>CODING : </h3>
+                                <div class="skill">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Javascript</span>
+                                    <span>J-Query</span>
+                                    <span>React</span>
+                                </div>
+                            </div>
+                            <!-- 디자인 스킬 -->
+                            <div class="left-skill-box design-box">
+                                <h3>DESIGN : </h3>
+                                <div class="skill">
+                                    <span>PS</span>
+                                    <span>Illustration</span>
+                                    <span>Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- MO & Tab 스킬 창 -->
+            <div class="m-skill back-to-position to-up delay-0">
+                <h2>${ MY SKILLS }</h2>
+                <div class="skill-inner">
+                    <!-- 코딩 스킬 -->
+                    <div class="skill-box coding-box">
+                        <h3>CODING</h3>
+                        <div>
+                            <ul>
+                                <li>
+                                    <p>HTML</p>
+                                    <p>85%</p>
+                                </li>
+                                <li>
+                                    <p>CSS</p>
+                                    <p>80%</p>
+                                </li>
+
+                                <li>
+                                    <p>Javascript</p>
+                                    <p>70%</p>
+                                </li>
+                                <li>
+                                    <p>J-Query</p>
+                                    <p>75%</p>
+                                </li>
+                                <li>
+                                    <p>React</p>
+                                    <p>50%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 디자인 스킬 -->
+                    <div class="skill-box design-box">
+                        <h3>DESIGN</h3>
+                        <div>
+                            <ul>
+                                <li>
+                                    <p>PS</p>
+                                    <p>85%</p>
+                                </li>
+                                <li>
+                                    <p>Illustration</p>
+                                    <p>85%</p>
+                                </li>
+                                <li>
+                                    <p>Figma</p>
+                                    <p>95%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) ABOUT ME-------------------------- -->
+    <section class="section scroll-spy" id="section3">
+        <div class="inner">
+            <div class="about-box back-to-position to-up delay-0">
+                <!-- 제목 -->
+                <h2>${ ABOUT ME }</h2>
+                <!-- 자기소개 내용 -->
+                <div class="arrange-box">
+                    <div class="about-introduction">
+                        <!-- 이미지 -->
+                        <div class="about-pc">
+                            <img class="pc-about" src="images/photo/pc-photo.png" alt="김현지">
+                        </div>
+                        <div class="about-img">
+                            <img class="tab-about" src="images/photo/tab-photo.png" alt="김현지">
+                        </div>
+                        <!-- 자기소개 박스 -->
+                        <div class="introduction-container">
+                            <p>김현지</p>
+                            <p>1997.05.30</p>
+                            <p>경기도 시흥시</p>
+                        </div>
+                    </div>
+                    <!-- TXT 박스 -->
+                    <div class="about-container">
+                        <!-- Education 소개 -->
+                        <div class="about-box-cont education-box">
+                            <h3>Education</h3>
+                            <ul>
+                                <li>
+                                    <p>2021. 11 - 2022. 05</p>
+                                    <div class="Education-category">
+                                        <p>PWA 제작 프론트엔드 개발 과정 수료</p>
+                                        <span>[스마트웹 & 콘텐츠개발]</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>2016. 03 - 2019. 02</p>
+                                    <div class="Education-category">
+                                        <p>강원대학교</p>
+                                        <span>치위생학과(4년제)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>2014. 03 - 2016. 02</p>
+                                    <div class="Education-category">
+                                        <p>정왕고등학교</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- License 자격증 소개 -->
+                        <div class="about-box-cont license-box">
+                            <h3>License</h3>
+                            <ul>
+                                <li>
+                                    <p>2022.09</p>
+                                    <div class="license-category">
+                                        <p>웹디자인기능사</p>
+                                        <span>한국산업인력공단</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>2022. 03</p>
+                                    <div class="license-category">
+                                        <p>GTQ(그래픽기술자격) 1급</p>
+                                        <span>한국생산성본부</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>2022. 05</p>
+                                    <div class="license-category">
+                                        <p>GTQI(그래픽기술자격 일러스트) 1급</p>
+                                        <span>한국생산성본부</span>
+                                    </div>
+                                </li>
+                                <li class="etc">
+                                    워드프로세서, 컴퓨터활용능력2급, 전산회계2급<br>
+                                    자동자운전면허2종보통, 치과위생사 면허증
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5) PC-footer-------------------------- -->
+            <footer class="back-to-position to-fast-up delay-0">
+                <div class="footer-inner">
+                    <!-- contact 연락처 -->
+                    <div class="contact-box">
+                        <h3>CONTACT</h3>
+                        <ul>
+                            <li>
+                                <span>E-mail</span>
+                                <p><a href="mailto:forget019@gmail.com" target="_top">forget019@gmail.com</a></p>
+                            </li>
+                            <li>
+                                <span>TEL</span>
+                                <p>010 - 8388 - 9721</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- copyright & 상단 up -->
+                    <div class="copyright-box">
+                        <ul>
+                            <li>이 홈페이지는 반응형으로 제작되었습니다.</li>
+                            <li>© Kim Hyeonji 2022. All Right Reserved</li>
+                        </ul>
+                        <!-- 상단으로 가는 버튼 -->
+                        <a href="#">Back to Top</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- 5) MO/TAB-footer-------------------------- -->
+    <section class="section scroll-spy" id="section4">
+        <div class="inner">
+            <div class="contact-box back-to-position delay-0">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li>
+                        <span>E-mail</span>
+                        <p><a href="mailto:forget019@gmail.com" target="_top">forget019@gmail.com</a></p>
+                    </li>
+                    <li>
+                        <span>TEL</span>
+                        <p>010 - 8388 - 9721</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="copyright-box back-to-position delay-0">
+                <ul>
+                    <li>이 홈페이지는 반응형으로 제작되었습니다.</li>
+                    <li>© Kim Hyeonji 2022. All Right Reserved</li>
+                </ul>
+                <a href="#" id="btnGoTop" style="cursor:pointer;" onclick="window.scrollTo(0,0);">Back to Top</a>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+    <script>
+        var swiper = new Swiper("#section1 .mySwiper", {
+            direction: "vertical",
+            pagination: {
+                el: "#section1 .swiper-pagination",
+                clickable: true,
+            },
+            debugger: true, //드래그 기능
+            mousewheel: true, //마우스 휠 기능
+            loop: false, //반복 기능
+            speed: 1100, //스크롤 속도
+            //자동 스크를링
+        });
+        var swiper = new Swiper("#section5 .mySwiper", {
+            pagination: {
+                el: "#section5 .swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

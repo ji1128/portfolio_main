@@ -1,0 +1,1089 @@
+@charset "UTF-8";
+/* -- */
+/* =====================MO========================= */
+
+::-webkit-scrollbar {
+        display: none; /* 스크롤 투명하게 */
+    }
+
+/* #section2 h3{display: none;} */
+#section0 {
+    background: url(../images/bg/pc-bg.png) no-repeat;
+    background-position: left center;
+    background-size: auto;
+}
+#section1, #section5 {
+    background: url(../images/bg/pc-bg-blue.png) center;
+    background-position: left center;
+    background-size: cover;
+}
+#section2 {
+    background: url(../images/bg/pc-bg.png) center;
+    background-position: left center;
+    background-size: cover;
+}
+#section3 {
+    background: url(../images/bg/pc-bg-black.png) center;
+    background-position: left center;
+    background-size: cover;
+}
+
+/* ===================MO-header=================== */
+
+/* pc-menu 숨기기 */
+#gnb-pc{display: none;}
+
+header{
+    width: 100%;
+    height: 55px;
+    position: fixed;/*상단고정*/
+    order: 1;
+    z-index: 10;
+}
+header .inner{width: 100%;margin: auto;}
+header h1{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 0 25px;
+    font-size: 15px;
+    color: #fff;
+}
+header h1 a{letter-spacing:1px}
+
+/* menu-toggle-btn */
+.menu-toggle-btn{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 16px;
+    right: 18px;
+    z-index: 200;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    box-sizing: border-box;
+}
+
+.menu-toggle-btn > div{
+    width: 27px;
+    height: 1.7px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 5px 0; /*상하좌우 벌려주기*/
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* 햄버거 버튼 -> X모양 */
+/* .active class가 붙었을 때 바뀌는 모양 지정 */
+.menu-toggle-btn.active #one{
+    transform: translateY(6.5px) rotate(-150deg);
+    transition: all 0.6s ease-in-out;
+    background-color: #fff;
+}
+.menu-toggle-btn.active #two{
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+.menu-toggle-btn.active #three{
+    transform: translateY(-7px) rotate(-30deg);
+    transition: all 0.6s ease-in-out;
+    background-color: #fff;
+}
+
+/* menu 뒷배경--------------------------------- */
+.overlay{
+    width: 100%;
+    height: 0;
+    background-color: rgba( 000, 000, 000, 0.8);
+    z-index: 8; 
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    opacity: 0;
+    /* 보이지는 않지만 화면에 공간이 유지되는 visibility 기능으로 숨겨줌 */
+    visibility: hidden;
+    transition: 0.3s;
+}
+.overlay.visible{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* mo-menu--------------------------------- */
+#gnb-mo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
+
+    overflow: hidden;
+}
+#gnb-mo ul li{
+    margin: 22px 0;
+    display: flex;
+    justify-content: center;
+}
+#gnb-mo ul li:first-child{
+    margin: 0px 0 22px;
+}
+/* mo-menu fadeIn 효과------- */
+@keyframes fadeInTop{
+    0% { opacity: 0; transform: translatey(-25%);}
+    100% { opacity: 1; transform: translatey(0);}
+}
+  /* 등장 시 y축으로 -25%에서 0으로 위에서 아래로 이동하며 fadein되게 함  */
+.overlay.visible li{
+    animation: fadeInTop 0.3s ease forwards;
+}
+/* menu 글자색상------- */
+
+#gnb-mo ul li a{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* menu hover 밑줄효과------- */
+#gnb-mo ul li.hover-line a::after{
+    position: absolute;
+    content:"";
+    display: block;
+    border-bottom: 3px solid #fff;
+    /* width를 0에서 hover하면 0.3초만에 100%로 변하도록 설정 */
+    width: 0%;
+    transition: width 0.3s ease-out;
+    left: auto; right: 0;
+}
+#gnb-mo ul li.hover-line:hover a::after{
+    width: 100%; left: 0; right: auto;
+}
+
+/* #gnb-mo ul li a:hover{
+    text-decoration: underline;
+    text-underline-position:under;
+    
+} */
+
+/* 바로가기 버튼--------------------------------- */
+#gnb-mo ul li.link{
+    float: left;
+    margin: 18px 10px 50px;
+}
+#gnb-mo ul li.link a:hover{
+    text-decoration: none;
+}
+div.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 55px;
+    border: 1px solid #fff;
+    font-size: 35px;
+    font-weight: 100;
+    transition: all 0.3s ease-in-out;
+    border-radius: 100px;
+    color: #fff;
+}
+div.btn.btn--white{
+    background-color: #fff;
+    color: #000;
+}
+div.btn.btn--black{
+    width: 113px;
+}
+/* btn효과-------- */
+div.btn:hover{
+    transform: scale(1.2); /*scale로 hover시 btn 커짐*/
+}
+
+
+
+/* ===================MO-intro=================== */
+#section0{
+    display: flex;
+    align-items: center;
+}
+#section0 .inner{
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section0 .inner .intro{
+    width: 70%;
+    height: 55vh;
+    position: relative; /* 하위 컨텐츠 정렬 기준*/
+}
+/* 제목--------------------------------- */
+#section0 h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+/* 타이핑 효과--------------------------------- */
+/* 타이핑 커서 */
+@keyframes cursor {
+    to {
+        border-color: transparent; /* 투명해지는 효과가 반복되게 하여 깜빡이는 커서 느낌을 냄*/
+    }
+}
+.txt {
+    display: table-cell; /*table-cell로 border-right를 줌*/
+    vertical-align: middle;
+    border-right: 0.05em solid #F81857; /*타이핑 커서 색상*/
+    animation: cursor 0.5s ease infinite; /*위에서 지정한 cursor 키프레임 애니메이션을 반복해서 실행되게 함*/
+}
+#section0 .inner h3{
+    color: #fff;
+
+    font-weight: 100;
+    font-size: 23px;
+}
+/* 능력 소개--------------------------------- */
+#section0 .inner .introduction{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 30px -20px 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#section0 .inner .introduction span{
+    color: #dadada;
+    font-size: 22vw;
+    font-weight: 700;
+    padding: 0 5px;
+}
+#section0 .inner .introduction ul{
+    padding: 0 7px ;
+}
+#section0 .inner .introduction ul li{
+    color: #fff;
+    font-size: 2.8vw;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: right;
+    line-height: 1.2;
+}
+
+/* ===================MO-skill=================== */
+#section2{
+    width: 100%;
+    height: 100vh;
+}
+/* pc버전 숨기기 */
+#section2 .pc-skill {display: none;}
+
+#section2 .inner{
+    width: 100%;
+    height: 100%;
+    padding: 0 11%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section2 .m-skill{
+    width: 80%;
+}
+#section2 .m-skill h2{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 5.5vw; /*23px*/
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+#section2 .m-skill .skill-box{
+    /* 코딩박스 & 디자인박스 */
+    width: 90%;
+    margin: auto;
+}
+#section2 .m-skill .skill-box h3{
+    /* coding & design */
+    color: #fff;
+    font-size: 18px; /*18px*/
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+}
+#section2 .m-skill .skill-box h3::after{
+    /* coding & design 선 */
+    display: block;
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+}
+#section2 .m-skill .skill-box div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    
+    padding: 10px 17px 20px;
+}
+#section2 .m-skill .skill-box ul{
+    width: 100%;
+
+}
+#section2 .m-skill .skill-box ul li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 150%;
+
+    transition: all 0.3s ease-in-out;
+}
+#section2 .m-skill .skill-box ul li:hover{
+    font-weight: 700;
+}
+
+
+
+
+/* ============MO-Aboutme============ */
+/* 태블릿용 사진 숨기기 */
+#section3 img.tab-about{display: none;}
+
+#section3 footer{display: none;}
+
+#section3 .inner{
+    width: 85%;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap; /*하위메뉴 세로, 여러줄 정렬*/
+}
+#section3 .inner h2{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 5.5vw; /*23px*/
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+#section3 .inner .about-box{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+/* 자기소개 박스--------------------------------- */
+#section3 .inner .introduction-container{
+    width: 100%;
+    padding: 10px 15px ;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+#section3 .inner .introduction-container p{
+    color: #fff;
+    font-size: 14px;
+}
+
+/* TXT 박스--------------------------------- */
+#section3 .inner .about-box-cont{
+    /* background-color: #F81857; */
+    padding: 17px 15px 0;
+}
+#section3 .inner .about-box-cont h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    position: relative;
+}
+#section3 .inner .about-box-cont h3::after{
+    /* 제목 옆 선 */
+    display: block;
+    content: "";
+    width: 66%;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+}
+#section3 .inner .license-box h3::after{
+    width: 74%;
+}
+#section3 .inner .about-box-cont ul{
+    padding: 15px 0;
+}
+#section3 .inner .about-box-cont ul li{
+    display: flex;
+    flex-flow: row nowrap;
+    color: #fff;
+    padding: 5px 0;
+}
+#section3 .inner .about-box-cont ul li > p{
+    width: 37%;
+    font-size: 9px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+#section3 .inner .about-box-cont ul li > div{
+    width: 63%;
+}
+#section3 .inner .license-box ul li > p{width: 25%;}
+#section3 .inner .license-box ul li > div{width: 75%;}
+
+#section3 .inner .about-box-cont ul li > div p:first-child{
+    font-weight: 600;
+    font-size: 13px;
+}
+#section3 .inner .about-box-cont ul li > div span{
+    color: #C5C5C5;
+    font-size: 9px;
+    padding: 3px 0;
+}
+#section3 .inner .about-box-cont ul li.etc{
+    width: 100%;
+    color: #C5C5C5;
+    font-size: 10px;
+    padding: 3px 0;
+    text-align: right;
+
+    display: block;
+}
+
+/* ============MO-footer============ */
+#section4{
+    height: 24.5vh;
+    background-color: #E1DFDD;
+}
+#section4 .inner{
+    width: 100%;
+    height: 100%;
+}
+#section4 .inner .contact-box{
+    width: 85%;
+    margin: 0 auto 0;
+    padding: 30px 0 0;
+}
+#section4 .inner h3{
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    position: relative;
+}
+#section4 .inner h3::after{
+    display: block;
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: #000;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+}
+#section4 .inner .contact-box ul{
+    padding: 15px 17px;
+}
+#section4 .inner .contact-box ul li{
+    padding: 7px 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#section4 .inner .contact-box ul li span{
+    width: 15%;
+    font-size: 10px;
+    color: #808080;
+    padding-top: 4px;
+}
+#section4 .inner .contact-box ul li p{
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+}
+#section4 .inner .copyright-box{
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    justify-content: space-between; */
+    margin-top: 10px;
+    position: relative;
+}
+#section4 .inner .copyright-box ul li{
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+#section4 .inner .copyright-box > a{
+    text-align: right;
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* ===============Tab=============== */
+@media all and (min-width:768px) {
+    #section1, #section5, #section3 {background-position: center;}
+
+    /* ============tab-header============ */
+    header{
+        height: 70px;
+    }
+    header h1{
+        font-size: 15px;
+        padding: 25px 0 0 25px;
+    }
+
+    /* menu-toggle-btn */
+    .menu-toggle-btn{
+        /* background-color: greenyellow; */
+        top: 22px;
+        right: 23px;
+    }
+
+    /* tab-menu---------------- */
+    #gnb-mo ul li{
+        margin: 30px 0;
+    }
+    #gnb-mo ul li:first-child{
+        margin: 0px 0 30px 0;
+    }
+    /* menu 글자색상 */
+    #gnb-mo ul li a{
+        font-size: 60px;
+    }
+    
+    /* link 버튼--------------- */
+    #gnb-mo ul li.link{
+        float: left;
+        margin: 20px 7px 70px;
+    }
+    #gnb-mo ul li.link a:hover{
+        text-decoration: none;
+    }
+    div.btn{
+        width: 170px;
+        height: 72px;
+        font-size: 42px;
+        font-weight: 100;
+        /* transition: all 0.3s ease-in-out; */
+    }
+    div.btn.btn--white{
+        background-color: #fff;
+        color: #000;
+    }
+    div.btn.btn--black{
+        width: 118px;
+    }
+
+    /* ===================TAB-intro=================== */
+    #section0 .inner .intro{
+        width: 100%;
+        margin: 0 20%;
+        height: 55vh;
+    }
+
+    /* 능력 소개 */
+    #section0 .inner .introduction span{
+        font-size: 16vw;
+    }
+    #section0 .inner .introduction ul li{
+        font-size: 2.3vw;
+    }
+
+    /* ===================TAB-skill=================== */
+    #section2 .m-skill .skill-box h3{
+        /* coding & design */
+        font-size: 22px; /*18px*/
+    }
+    #section2 .m-skill .skill-box ul li{
+        font-size: 34px;
+    }
+
+
+    /* ===================TAB-about ME=================== */
+    #section3 img.pc-about{display: none;}
+    #section3 img.tab-about{display: block;}
+
+    #section3 .inner{
+        position: relative;
+        width: 85%;
+        height: 100vh;
+        margin: auto;
+    }
+    #section3 .inner h2{
+        margin-bottom: 80px;
+    }
+    #section3 .inner .about-box{
+        height: 78vh;
+    }
+    #section3 .inner .arrange-box{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+    /* 이미지 박스--------------------------------- */
+    #section3 .inner .about-img{
+        width: 220px;
+    }
+    #section3 .inner .about-img img{
+        display: block;
+    }
+
+    /* 자기소개 박스--------------------------------- */
+
+    #section3 .inner .introduction-container{
+        padding: 10px 0;
+        
+    }
+
+    /* TXT 박스--------------------------------- */
+
+    #section3 .inner .about-container{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #section3 .inner .about-box-cont{
+        padding: 0;
+        width: 100%;
+    }
+
+    #section3 .inner .about-box-cont h3{font-size: 30px;}
+    #section3 .inner .about-box-cont h3::after{width: 58%;}
+    #section3 .inner .license-box h3::after{width: 66%;}
+    #section3 .inner .about-box-cont ul{padding: 20px 0;}
+    #section3 .inner .about-box-cont ul li{padding: 8px 0;}
+    #section3 .inner .about-box-cont ul li > p{font-size: 12px;}
+    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 16px;}
+    #section3 .inner .about-box-cont ul li > div span{font-size: 12px;}
+    #section3 .inner .about-box-cont ul li.etc{font-size: 12px;padding: 15px 0 0;}
+
+
+
+
+    /* ===================TAB-footer=================== */
+    
+
+    #section3 footer{
+        display: block;
+        width: 100%;
+        height: 220px;
+        /* height: 24vh; */
+        background-color: #E1DFDD;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+    }
+    #section3 .footer-inner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        position: relative;
+    }
+    #section3 .footer-inner .contact-box{
+        width: 89%;
+        margin: 35px auto 0;
+    }
+    #section3 .footer-inner h3{
+        font-size: 21px;
+        font-weight: 900;
+        letter-spacing: 0px;
+        position: relative;
+    }
+    #section3 .footer-inner h3::after{
+        display: block;
+        content: "";
+        width: 70%;
+        height: 1px;
+        background-color: #000;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 4px;
+        right: 0;
+    }
+    #section3 .footer-inner .contact-box ul{
+        padding: 15px 17px;
+    }
+    #section3 .footer-inner .contact-box ul li{
+        padding: 7px 0;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    #section3 .footer-inner .contact-box ul li span{
+        font-size: 11px;
+        color: #808080;
+        padding: 4px 30px 0 0;
+    }
+    #section3 .footer-inner .contact-box ul li p{
+        font-size: 22px;
+        font-weight: 100;
+        letter-spacing: 1.5px;
+    }
+    #section3 .footer-inner .copyright-box{
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;        
+    }
+    #section3 .footer-inner .copyright-box ul li{
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+    #section3 .footer-inner .copyright-box > a{
+        text-align: right;
+        font-weight: 900;
+        /* position: absolute;
+        right: 0;
+        bottom: 0; */
+    }
+    #section3 footer{display: none;}
+
+
+}
+
+
+/* ==========================PC========================== */
+@media all and (min-width:1200px) {
+    #section0 {
+        background: url(../images/bg/pc-bg.png) center;
+        background-size: cover;
+    }
+    #section1,#section5 {
+        background: url(../images/bg/pc-bg-blue.png) center;
+        background-size: cover;
+    }
+    #section2 {
+        background: url(../images/bg/pc-bg.png) center;
+        background-size: cover;
+    }
+    #section3 {
+        background: url(../images/bg/pc-bg-black.png) center;
+        background-size: cover;
+    }
+
+    /* ===================PC-header=================== */
+    /* MO 메뉴 숨기기 */
+    #gnb-pc{display: flex;}
+    #gnb-mo, .menu-toggle-btn{display: none;}
+    
+    header{
+        width: 100%;
+        height: 90px;
+        /* background-color: violet; */
+        display: flex;
+        justify-content: center;
+    }
+    header .inner{
+        width: 100%;
+        margin: 0 3%;
+        height: 90px;
+        /* background-color: royalblue; */
+        position: relative;
+    }
+    header h1{
+        padding: 35px 0;
+        font-size: 17px;
+    }
+    /* PC 메뉴--------------------------------- */
+    #gnb-pc{
+        position: absolute;
+        right: 0;
+        top: 35px;
+    }
+    #gnb-pc ul li{
+        float: left;
+        margin: 0 25px;
+        position: relative;
+    }
+    #gnb-pc ul li:nth-child(4){
+        margin: 0 30px;
+    }
+    #gnb-pc ul li a{
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        color: #fff;
+    }
+    #gnb-pc ul li.hover-line a::after{
+        position: absolute;
+        content:"";
+        display: block;
+        border-bottom: 2px solid #fff;
+        
+        /* width를 0에서 hover하면 0.3초만에 100%로 변하도록 설정 */
+        width: 0;
+        transition: width 0.3s ease-in-out;
+        left: auto; right: 0;
+    }
+    #gnb-pc ul li.hover-line:hover a::after{
+        width: 100%;  left: 0; right: auto;
+    }
+    /* #gnb-pc ul li a:hover{
+        text-decoration: underline;
+        text-underline-position:under;
+    } */
+
+    /* PC 바로가기 버튼--------------------------------- */
+    #gnb-pc ul li.link{
+        margin: 0 13px;
+    }
+    #gnb-pc ul li:last-child{
+        margin: 0 0 0 13px;
+    }
+    #gnb-pc ul li.link a:hover{
+        text-decoration: none;
+    }
+    
+    div.btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 72px;
+        height: 26px;
+        border: 1px solid #fff;
+        font-size: 17px;
+        font-weight: 100;
+        transition: all 0.4s ease-in-out;
+        border-radius: 100px;
+        color: #000;
+    }
+    div.btn.btn--white{
+        background-color: #fff;
+        color: #000;
+    }
+    div.btn.btn--black{
+        width: 58px;
+        color: #fff;
+    }
+    /* btn효과-------- */
+    div.btn:hover{
+        transform: scale(1.2); /*scale로 hover시 btn 커짐*/
+    }
+
+    /* ===================PC-intro=================== */
+    #section0 .inner .intro{
+        width: 100%;
+        margin: 0 20%;
+        height: 55vh;
+    }
+    #section0 h1{font-size: 4.5vw;}
+    #section0 .inner h3{font-size: 1.7vw;}
+
+    #section0 .inner .introduction span{font-size: 140px;}
+    #section0 .inner .introduction ul li{font-size: 23px;}
+
+
+    /* ===================PC-skill=================== */
+    /* mo버전 숨기기 */
+    #section2 .m-skill{display: none;}
+    #section2 .pc-skill {display: block;}
+    #section2 .inner{width: 100%;padding: 0 5%;}
+    #section2 .inner .pc-skill{
+        width: 100%;
+        flex-flow: column wrap;
+    }
+    /* 제목--------------------------------- */
+    #section2 .pc-skill > h2{
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 3.5vw;
+        font-weight: 900;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    /* right & left 박스 정렬 */
+    #section2 .pc-skill .skill-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+    }
+
+    /* right--------------------------------- */
+    /* 반원 */
+    #section2 .right .circle{
+        width: 500px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 300px 300px 0 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+    #section2 .right div .right-txt{
+        position: relative;
+    }
+    #section2 .right h2{
+        color: #000;
+        font-size: 190px; /*16vw*/
+        font-weight: 700;
+        padding: 40px 25px 0 0;
+        transition: all 0.3s ease-in-out;
+    }
+    #section2 .right span{
+        color: #969696;
+        font-size: 65px; /*4.2vw*/
+        font-weight: 700;
+        position: absolute;
+        bottom: 10px;
+        right: -30px;
+    }
+
+    /* left--------------------------------- */
+    #section2 .left-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        margin-top: 10px; /* 반원과 text간 간격*/
+    }
+    #section2 .left .left-skill-box{
+        display: flex;
+        flex-flow: row nowrap;
+        display: flex;
+        align-items: center;
+    }
+    #section2 .left div h3{
+        /* coding & design */
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    #section2 .left div .skill{
+        padding: 10px 0; /*coding & design 스킬간의 간격*/
+    }
+    #section2 .left div .skill span{
+        color: #fff;
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 1.2;
+        letter-spacing: 3px;
+        padding: 0 20px; /* skill 사이 간격 */
+    }
+
+
+
+    /* ===================PC-about me=================== */
+    #section3 footer{display: block;}
+    #section4 {display: none;}
+    #section3 img.pc-about{display: block;}
+    #section3 .about-img img.tab-about{display: none;}
+    #section3 .about-img{display: none; background-color:#F81857;}
+
+    #section3 .inner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: auto;    
+    }
+    #section3 .about-box{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    #section3 .inner h2{font-size: 3.5vw; margin: 15px 0 40px;}
+    #section3 .inner .arrange-box{
+        width: 93%;
+    }
+    #section3 .inner .about-container{
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin-left: 30px;
+    }
+    #section3 .inner .about-box-cont{
+        padding: 0 30px ;
+    }
+    #section3 .inner .about-box-cont h3{font-size: 27px;}
+    #section3 .inner .about-box-cont h3::after{width: 58%;}
+    #section3 .inner .license-box h3::after{width: 66%;}
+    #section3 .inner .about-box-cont ul{padding: 20px 0;}
+    #section3 .inner .about-box-cont ul li{padding: 8px 0;}
+    #section3 .inner .about-box-cont ul li > p{font-size: 11px;}
+    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 16px;}
+    #section3 .inner .about-box-cont ul li > div span{font-size: 11px;}
+    #section3 .inner .about-box-cont ul li.etc{font-size: 11px;padding: 8px 0 0;}
+
+
+    #section3 img.pc-about{
+        width: 700px;
+        height: auto;
+    }
+
+
+    /* ===================PC-footer=================== */
+    #section3 .footer-inner{
+        /* width: 1350px;margin: auto; */
+        width: 89%;margin: auto;
+    }
+    #section3 .footer-inner .contact-box{width: 100%;}
+
+
+
+    #section3 .footer-inner h3{
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0px;
+        position: relative;
+    }
+    #section3 .footer-inner h3::after{
+        display: block;
+        content: "";
+        width: 90%;
+        height: 1px;
+        background-color: #000;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 4px;
+        right: 0;
+    }
+    #section3 .footer-inner .contact-box{
+        width: 100%;
+        margin: 32px auto 0;
+    }
+    #section3 .footer-inner .contact-box ul{
+        padding: 15px 45px;
+    }
+    #section3 .footer-inner .copyright-box{width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+}

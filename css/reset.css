@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "NeueMontreal";
+    src: url("../fonts/NeueMontreal-Light.woff") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueMontreal";
+    src: url("../fonts/NeueMontreal-Regular.woff") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueMontreal";
+    src: url("../fonts/NeueMontreal-Medium.woff") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueMontreal";
+    src: url("../fonts/NeueMontreal-Bold.woff") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*  font-family: 'NeueMontreal', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* ---------------------------------------- */
+body{font-family: 'NeueMontreal', 'Noto Sans KR', sans-serif;}
+
+/* ---------------------------------------- */
+/* scroll-spy */
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+}
+.back-to-position.to-up{
+    /* 아래에서 위로 등장하게 */
+    transform: translateY(30px);
+}
+.back-to-position.to-fast-up{
+    /* 아래에서 위로 등장하게 */
+    transform: translateY(200px);
+}
+.show .back-to-position{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.back-to-position.to-right{
+    /* to-right => 왼쪽에서 부터 등장하니까 (마이너스) -150px */
+    transform: translateX(-150px);
+    /* 좌우로만 움직이기 때문에 translateX로 설정 */
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+
+
+/* 시간차 등장 모션 제작 */
+.show .back-to-position.delay-0{transition-delay: 0s;}
+.show .back-to-position.delay-1{transition-delay: 0.3s;}
+.show .back-to-position.delay-2{transition-delay: 0.6s;}
+.show .back-to-position.delay-3{transition-delay: 0.9s;}
+
+
