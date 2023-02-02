@@ -34,6 +34,38 @@ $(document).ready(function () {
     setInterval(typing, 200); //반복
 
 
+    // swiper slide -----------------------------
+    var swiper = new Swiper(".portfolio-part .mySwiper", {
+        direction: "horizontal", //vertical-좌우 슬라이딩, horizontal-상하 슬라이딩
+        pagination: {
+            el: ".portfolio-part .swiper-pagination",
+            clickable: true,
+        },
+        debugger: true, //드래그 기능
+        mousewheel: true, //마우스 휠 기능
+        loop: true, //반복 기능
+        autoplay: true, //자동재생
+        speed: 1100, //스크롤 속도
+        //자동 스크를링
+        autoplay: { //자동슬라이드 (false-비활성화)
+            delay: 3000, // 시간 설정
+            disableOnInteraction: false, // false-스와이프 후 자동 재생
+        },
+        navigation: { //좌우 버튼
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    // var swiper = new Swiper("#section5 .mySwiper", {
+    //     pagination: {
+    //         el: "#section5 .swiper-pagination",
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return '<span class="' + className + '">' + (index + 1) + "</span>";
+    //         },
+    //     },
+    // });
+
     // skill -----------------------------
     // coding-skill
     var $gauge = [
@@ -69,7 +101,7 @@ $(document).ready(function () {
         $(this).css("text-decoration", "");
     });
 
-    // skroll-spy -----------------------------
+    // scroll-spy -----------------------------
     //Masgic Scroll---------------------
     const spyEls = document.querySelectorAll("section.scroll-spy");
     //forEach -> 배열함수
@@ -84,11 +116,43 @@ $(document).ready(function () {
             .addTo(new ScrollMagic.Controller());
     });
 
-    // skill -----------------------------
 
-    
-    // skill -----------------------------
+    // scroll로 page 넘기기 -----------------------------
 
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, {
+        passive: false
+    });
+
+    var $html = $("html");
+    var page = 1;
+    var lastPage = $(".content").length;
+
+    $html.animate({
+        scrollTop: 0
+    }, 10);
+
+    $(window).on("wheel", function (e) {
+
+        if ($html.is(":animated")) return;
+
+        if (e.originalEvent.deltaY > 0) {
+            if (page == lastPage) return;
+
+            page++;
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+
+        $html.animate({
+            scrollTop: posTop
+        });
+
+    });
 
 
 })

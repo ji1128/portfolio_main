@@ -99,7 +99,7 @@
 
     <div id="fullpage">
         <!-- 1) intro-------------------------- -->
-        <section class="section scroll-spy" id="section0">
+        <section class="content section scroll-spy" id="section0">
             <div class="inner">
                 <div class="intro">
                     <!-- 제목 -->
@@ -125,7 +125,7 @@
         </section>
 
         <!-- 2) PORTFOLIO-------------------------- -->
-        <section class="section scroll-spy" id="section1">
+        <section class="content section scroll-spy portfolio-part" id="section1">
             <h2>${ PORTFOLIO }</h2>
             <div class="swiper mySwiper back-to-position to-up ">
                 <div class="swiper-wrapper">
@@ -220,7 +220,7 @@
                             <div class="inner">
                                 <!-- 상단 타이틀 -->
                                 <div class="pf-head-title">
-                                    <p>2 /</p>
+                                    <p>02 /</p>
                                     <p>Clone Coding</p>
                                 </div>
 
@@ -530,13 +530,16 @@
                     </div>
                 </div>
             
+            <!-- swiper navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
             <!-- swiper 페이저 -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section class="section scroll-spy" id="section5">
+    <section class="content section scroll-spy portfolio-part" id="section5">
         <h2>${ PORTFOLIO }</h2>
         <div class="swiper mySwiper back-to-position to-up">
             <div class="swiper-wrapper">
@@ -730,12 +733,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- swiper navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>            
+            
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
     <!-- 3) MY SKILLS-------------------------- -->
-    <section class="section scroll-spy" id="section2">
+    <section class="content section scroll-spy" id="section2">
         <div class="inner">
             <div class="pc-skill back-to-position to-up delay-0">
                 <h2>${ MY SKILLS }</h2>
@@ -837,7 +845,7 @@
     </section>
 
     <!-- 4) ABOUT ME-------------------------- -->
-    <section class="section scroll-spy" id="section3">
+    <section class="content section scroll-spy" id="section3">
         <div class="inner">
             <div class="about-box back-to-position to-up delay-0">
                 <!-- 제목 -->
@@ -955,7 +963,7 @@
     </section>
 
     <!-- 5) MO/TAB-footer-------------------------- -->
-    <section class="section scroll-spy" id="section4">
+    <section class="content section scroll-spy" id="section4">
         <div class="inner">
             <div class="contact-box back-to-position delay-0">
                 <h3>CONTACT</h3>
@@ -983,34 +991,6 @@
     </div>
 
 
-    <script>
-        var swiper = new Swiper("#section1 .mySwiper", {
-            direction: "vertical",
-            pagination: {
-                el: "#section1 .swiper-pagination",
-                clickable: true,
-            },
-            debugger: true, //드래그 기능
-            mousewheel: true, //마우스 휠 기능
-            loop: true, //반복 기능
-            autoplay: true, //자동재생
-            speed: 1100, //스크롤 속도
-            //자동 스크를링
-            autoplay: { //자동슬라이드 (false-비활성화)
-            delay: 3000, // 시간 설정
-            disableOnInteraction: false, // false-스와이프 후 자동 재생
-        },
-        });
-        var swiper = new Swiper("#section5 .mySwiper", {
-            pagination: {
-                el: "#section5 .swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + "</span>";
-                },
-            },
-        });
-    </script>
 </body>
 
 </html>

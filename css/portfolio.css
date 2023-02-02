@@ -1,6 +1,11 @@
 @charset "UFT-8";
 /* -- */
 
+html{overflow: hidden;}
+html, body {width: 100%; height: 100%;}
+.content{
+    height: 100vh;
+}
 /* ===================MO=================== */
 /* 배경색---------------------------------  */
 .slide0{background: #f3f3f3;}
@@ -35,6 +40,7 @@
     margin: 50px auto 0;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
+    position: relative;
 }
 
 
@@ -59,6 +65,7 @@
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+
 }
 .slide .pf-img:hover{
     box-shadow: 0px 0px 20px rgba(173, 173, 173, 0.5);
@@ -91,17 +98,23 @@
 
 /* 상단 타이틀--------------------------------- */
 .slide .inner .pf-head-title{
+    margin: 0 0 10px;
     display: flex;
-    flex-flow: row nowrap;
+    align-items: center;
 }
-.slide .inner .pf-head-title p{font-weight: 100;letter-spacing: 1.1px;}
+.slide .inner .pf-head-title p{
+    font-weight: 100;
+    letter-spacing: 1.1px;
+}
 .slide .inner .pf-head-title p:first-child{
-    font-size: 8px;
-    padding: 0 4px 0 0;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
 }
 .slide .inner .pf-head-title p:last-child{
-    font-size: 12px;
+    padding-top: 3px;
 }
+
 
 /* 본문 타이틀 제목--------------------------------- */
 .slide .inner .txt-container{width: 90%;margin: auto;}
@@ -260,17 +273,43 @@
 }
 
 /* 페이저--------------------------------- */
-/* #section1 .swiper-pagination-bullet{
-    
-} */
-#section1 .swiper-pagination-bullet-active {
+#section1 .swiper-pagination-bullet{
+    /* width: 5%;
+    height: 6px;
+    border-radius: 0; */
+    /*배경색 투명하게 만들기*/
+    /* background-color: transparent;
+    border: 1px solid #5E3C89; */
+    margin: 0 3px 15px;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#section1 .swiper-pagination-bullet:hover{
+    background-color: #8963ba;
+}
+#section1 .swiper-pagination-bullet-active{
     background: #5E3C89;
-    height: 25px;
+    width: 35px;
+    border-radius: 8px 8px;
+}
+
+/* #section1 .swiper-pagination-bullet-active {
+    background: #5E3C89;
+    width: 25px;
     border-radius: 10px;
+} */
+
+/* navigation buttons--------------------------------- */
+
+/* 원래 navigation 숨기기 */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
 }
 
 
-/* MO-Other-Design=================== */
+/* MO-Other-Design====================== */
 /* #section5  */
 
 /* PC txt 숨기기 */
@@ -298,17 +337,27 @@
 /* 상단 타이틀--------------------------------- */
 #section5 .slide .inner .pf-head-title{
     margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+}
+#section5 .slide .inner .pf-head-title p:first-child{
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+}
+#section5 .slide .inner .pf-head-title p:last-child{
+    padding-top: 3px;
 }
 
 /* 이미지 & 텍스트--------------------------------- */
 #section5 .img-txt-area{
-    width: 87%;
+    width: 80%;
     margin: auto;
 }
 /* 이미지 박스------- */
 #section5 .img-txt-area .img-box{
     width: 100%;
-    height: 45vh;
+    height: 37vh;
 }
 #section5 .od01 .img-txt-area .img-box{
     background: url(../images/site-img/other-design/0d01-img.jpg) no-repeat center;
@@ -334,12 +383,14 @@
     text-align: center;    
 }
 #section5 .img-txt-area .txt-box h4{
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 900;
 }
 #section5 .img-txt-area .txt-box h4 > strong{
-    font-weight: bold;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 14px;
 }
+
 
 /* 페이저--------------------------------- */
 #section5 .swiper-pagination-bullet{
@@ -354,27 +405,25 @@
     background: rgba(0, 0, 0, 0.2);
     padding: 0 25px 100px;
 }
-#section5  .swiper-pagination-bullet:first-child{
+#section5 .swiper-pagination-bullet:nth-child(1){
     background: url(../images/site-img/other-design/od01.png) center no-repeat;
     background-size: contain;
 }
-#section5  .swiper-pagination-bullet:nth-child(2){
+#section5 .swiper-pagination-bullet:nth-child(2){
     background: url(../images/site-img/other-design/od02.png) center no-repeat;
     background-size: contain;
 }
-#section5  .swiper-pagination-bullet:nth-child(3){
+#section5 .swiper-pagination-bullet:nth-child(3){
     background: url(../images/site-img/other-design/od03.png) center no-repeat;
     background-size: contain;
 }
-#section5  .swiper-pagination-bullet:last-child{
+#section5 .swiper-pagination-bullet:nth-child(4){
     background: url(../images/site-img/other-design/od04-1.png) center no-repeat;
     background-size: contain;
 }
-#section5  .swiper-pagination-bullet:hover{
-    opacity: 0.6;
-}
+
 #section5 .swiper-pagination-bullet-active {
-    filter: grayscale(80%);
+    opacity: 0.5;
 }
 
 /* ===================TAB=================== */
@@ -405,6 +454,11 @@
         padding: 0 18px 0 15px;
     }
 
+/* 상단 타이틀--------------------------------- */
+.slide .inner .pf-head-title p:first-child{
+    font-size: 23px;
+}
+    
     /* 페이지구성------ */
     .slide .inner .pf-txt .txt-page p{font-size: 1.9vw;}
     .slide .inner .pf-txt .txt-page span{font-size: 1.7vw;}
@@ -453,6 +507,7 @@
     }
 
 
+
     /* TAB-Other-Design=================== */
     /* #section5  */
 
@@ -482,23 +537,64 @@
         height: 12%;
     }
 
+    /* navigation buttons--------------------------------- */
+    .swiper-button-prev,
+    .swiper-button-next{
+    width: 70px;
+    height: 70px;
+    outline: none;
+    /* background-color: #7B0B10; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    cursor: pointer;
+
+    /* 화살표 가운데 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
+}
+.swiper-button-prev{
+    left: 10px;
+    background: url(../images/photo/p-prev.png) no-repeat center;
+    object-fit:cover;
+}
+.swiper-button-next{
+    right: 10px;
+    background: url(../images/photo/p-next.png) no-repeat center;
+    object-fit:cover;
+}
+.swiper-button-prev:hover{
+    background: url(../images/photo/p-prev-acitve.png) no-repeat center;
+}
+.swiper-button-next:hover{
+    background: url(../images/photo/p-next-acitve.png) no-repeat center;
+}
+
+
 }
 
 
 /* ===================PC=================== */
 @media all and (min-width:1200px) {
     /* 슬라이드 내부 크기 */
-    #section1 .swiper{
-        width: 90%;height: 80vh;
+    #section1 .swiper, #section5 .swiper{
+        width: 70%;height: 72vh;
     }
-    #section1 > h2{
-        color: #000;
+    /* ${ PORTFOLIO } h2 크기 */
+    #section1 > h2, #section5 > h2{
+        color: fff;
         font-size: 3.5vw;
         font-weight: 900;
         position: absolute;
         z-index: 5;
-        left: 5%;
-        top: 65px;
+        left: 10%;
+        top: 100px;
+        text-shadow: 2px 2px 2px gray; /*text 그림자 효과*/
     }
 
     /* ===================PC-PORTFOLIO=================== */
@@ -508,6 +604,7 @@
 
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding-top: 00px;
     }
 
@@ -517,11 +614,20 @@
         height: auto;
         padding-top: 0px;
     }
+    /* 상단 타이틀--------------------------------- */
+    .slide .inner .pf-head-title p:first-child{
+        font-size: 26px;
+    }
+    .slide .inner .pf-head-title p:last-child{
+        padding-top: 4px;
+        font-size: 16px;
+    }
 
     /* 이미지--------------------------------- */
     .slide .pf-img{
-        width: 50%;
-        height: 60vh;
+        width: 40%;
+        height: 45vh;
+        margin-left: 40px;
     }
     .slide0 .pf-img{
         background: url(../images/site-img/addict.png) no-repeat;
@@ -533,7 +639,7 @@
     .slide .inner .right{width: 50%;margin: auto;}
     .slide .inner .txt-container{
         width: 100%;
-        padding: 0 0 0 10%;
+        padding: 0 0 0 3%;
     }
     .slide .inner .txt-container .pf-title h2{
         font-size: 4vw;
@@ -550,17 +656,20 @@
         margin: 30px auto;
     }
     /* 사용기술 & 사용프로그램 ------- */
-    .slide .inner .pf-txt .txt-brand p{font-size: 12px;}
-    .slide .inner .pf-txt .txt-brand span{font-size: 9px;}
+    .slide .inner .pf-txt .txt-brand p{
+        font-size: 18px;padding-bottom: 5px;
+        font-weight: 600;
+    }
+    .slide .inner .pf-txt .txt-brand span{font-size: 14px;}
     .slide .inner .pf-txt .txt-brand span:last-child{width: 50px;}
 
     /* 참여도 & 제작기간 & TPYE------- */
     .slide .inner .pf-txt ul{
         padding: 7px 0;
     }
-    .slide .inner .pf-txt ul li{font-size: 14px;}
+    .slide .inner .pf-txt ul li{font-size: 16px;}
     .slide .inner .pf-txt ul li span,
-    .slide .inner .pf-txt div.txt-page span{font-size: 12px;}
+    .slide .inner .pf-txt div.txt-page span{font-size: 14px;}
     .slide .inner .pf-txt ul li.slash{
         font-size: 26px;
         padding: 0 20px 0 18px;
@@ -681,7 +790,16 @@
         margin: 0;
     }
 
-
-
+    /* navigation buttons--------------------------------- */
+    /* .swiper-button-prev >div, .swiper-button-next >div{
+        font-size: 22px;
+        color: #000;
+        
+    }
+    .swiper-button-prev div div.button__icon,
+    .swiper-button-next div div.button__icon{
+        display: block;
+        font-size: 28px;
+    } */
 
 }
