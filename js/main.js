@@ -56,50 +56,14 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
-    // var swiper = new Swiper("#section5 .mySwiper", {
-    //     pagination: {
-    //         el: "#section5 .swiper-pagination",
-    //         clickable: true,
-    //         renderBullet: function (index, className) {
-    //             return '<span class="' + className + '">' + (index + 1) + "</span>";
-    //         },
-    //     },
-    // });
+
 
     // skill -----------------------------
-    // coding-skill
-    var $gauge = [
-            "85", "80", "70", "70", "50"
-        ],
-        $skillCoding = $("#section2 .left .coding-box .skill span");
-    $skillDesign = $("#section2 .left .design-box .skill span");
-
-    //skill을 담은 span태그 에 hover하면 right박스에 저장한 문자 중 해당하는 문자를 뿌려줌
-    $skillCoding.hover(function () {
-        var i = $(this).index();
-        console.log(i);
-
-        $("#section2 .right div h2").text($gauge[i]); //문자가 뿌려지는 곳
-        $(this).css("text-decoration", "underline"); //hover할 시 나타날 효과
-    }, function () {
-        $(this).css("text-decoration", ""); //hover하지 않았을 때 상태
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1300
     });
 
-    // design-skill (위의 코드 반복)
-    var $gauge2 = [
-            "90", "85", "95"
-        ],
-        $skillDesign = $("#section2 .left .design-box .skill span");
-
-    $skillDesign.hover(function () {
-        var i = $(this).index();
-        console.log(i);
-
-        $("#section2 .right div h2").text($gauge2[i])
-        $(this).css("text-decoration", "underline");
-    }, function () {
-        $(this).css("text-decoration", "");
-    });
 
     // scroll-spy -----------------------------
     //Masgic Scroll---------------------

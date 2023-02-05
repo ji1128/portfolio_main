@@ -903,7 +903,13 @@ div.btn:hover{
     /* ===================PC-skill=================== */
     /* mo버전 숨기기 */
     #section2 .m-skill{display: none;}
-    #section2 .pc-skill {display: block;}
+    #section2 .pc-skill {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;align-items: center;
+    }
     #section2 .inner{width: 100%;padding: 0 5%;}
     #section2 .inner .pc-skill{
         width: 100%;
@@ -912,88 +918,98 @@ div.btn:hover{
     /* 제목--------------------------------- */
     #section2 .pc-skill > h2{
         color: #fff;
-        letter-spacing: 1px;
         font-size: 3.5vw;
         font-weight: 900;
-        margin-bottom: 10px;
-        transition: all 0.3s ease-in-out;
-    }
-    /* right & left 박스 정렬 */
-    #section2 .pc-skill .skill-box{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column wrap;
-    }
-
-    /* right--------------------------------- */
-    /* 반원 */
-    #section2 .right .circle{
-        width: 500px;
-        height: 300px;
-        background-color: rgba(255, 255, 255, 0.85);
-        border-radius: 300px 300px 0 0;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin-bottom: 20px;
-    }
-    #section2 .right div .right-txt{
-        position: relative;
-    }
-    #section2 .right h2{
-        color: #000;
-        font-size: 190px; /*16vw*/
-        font-weight: 700;
-        padding: 40px 25px 0 0;
-        transition: all 0.3s ease-in-out;
-    }
-    #section2 .right span{
-        color: #969696;
-        font-size: 65px; /*4.2vw*/
-        font-weight: 700;
         position: absolute;
-        bottom: 10px;
-        right: -30px;
+        left: 10%;
+        top: 100px;
+        z-index: 5;
+        text-shadow: 2px 2px 2px gray; /*text 그림자 효과*/
+    }
+    /* --------------------------------- */
+    #section2 .pc-skill .skill-bg{
+        width: 1200px;
+        height: 600px;
+        /* background-color: #808080; */
+        margin: auto;
+        padding-top: 100px;
+        display: flex;
+        flex-wrap: wrap; /*여러줄 배치*/
     }
 
-    /* left--------------------------------- */
-    #section2 .left-inner{
+    /* 상단 코딩 스킬--------------------------------- */
+    #section2 .pc-skill .skill-bg ul.coding-box{
+        width: 100%;
+        height: 300px;
+        /* background-color: #dadada; */
+        display: flex;justify-content: space-between;
+    }
+    #section2 .pc-skill .skill-bg ul.coding-box li{
+        width: 22%;
+        height: 300px;
+        background-color: #f4f4f4;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        flex-flow: column wrap;
-        margin-top: 10px; /* 반원과 text간 간격*/
     }
-    #section2 .left .left-skill-box{
-        display: flex;
-        flex-flow: row nowrap;
-        display: flex;
-        align-items: center;
+    #section2 .pc-skill ul.coding-box li div:first-child{
+        width: 90px;
+        height: 90px;
+        background-repeat: no-repeat; /*이미지 반복 방지*/
+        background-position: center;
+        background-size: contain;
+        margin: 10px auto 0;
     }
-    #section2 .left div h3{
-        /* coding & design */
-        color: #fff;
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        position: relative;
-    }
-    #section2 .left div .skill{
-        padding: 10px 0; /*coding & design 스킬간의 간격*/
-    }
-    #section2 .left div .skill span{
-        color: #fff;
-        font-size: 40px;
-        font-weight: 100;
-        line-height: 1.2;
-        letter-spacing: 3px;
-        padding: 0 20px; /* skill 사이 간격 */
+    .skill-icon1{background-image: url(../images/skill/html.png);}
+    .skill-icon2{background-image: url(../images/skill/css.png);}
+    .skill-icon3{background-image: url(../images/skill/js.png);}
+    .skill-icon4{background-image: url(../images/skill/jQuery.png);}
+
+    #section2 .pc-skill ul.coding-box li p{
+        margin: 15px auto 0;
+        font-family: 'NeueMontreal', sans-serif;
+        font-weight: 900;
+        font-size: 20px;
     }
 
+    #section2 .pc-skill ul.coding-box li div:last-child{margin: 15px auto 0;}
+    #section2 .pc-skill ul.coding-box li span{
+        font-family: 'NeueMontreal', sans-serif;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 55px;
+    }
+    #section2 .pc-skill ul.coding-box li span.percent{
+        font-size: 32px;
+        font-weight: 900;
+    }
+
+
+    /* 하단 디자인, tool--------------------------------- */
+    #section2 .pc-skill .skill-bg .design-box{
+        width: 100%;
+        height: 105px;
+        /* background-color: bisque; */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    #section2 .pc-skill .skill-bg .design-box ul{
+        display: flex;
+    }
+    #section2 .pc-skill .skill-bg .design-box ul li{
+        padding: 0 10px; /*icon 이미지 사이 간격*/
+    }
+    #section2 .pc-skill .skill-bg .design-box ul li:first-child{padding-left: 0px;}
+    #section2 .pc-skill .skill-bg .design-box ul li:last-child{padding-right: 0px;}
+    #section2 .pc-skill .skill-bg .design-box ul li img{
+        width: auto;height: 105px; /*icon 이미지 크기*/
+    }
+
+    #section2 .pc-skill .skill-bg ul li{transition: all 0.3s ease-in-out;}
+    #section2 .pc-skill .skill-bg ul li:hover{transform: translateY(-8px);}
 
 
     /* ===================PC-about me=================== */
@@ -1039,9 +1055,9 @@ div.btn:hover{
     #section3 .inner .license-box h3::after{width: 66%;}
     #section3 .inner .about-box-cont ul{padding: 18px 0;}
     #section3 .inner .about-box-cont ul li{padding: 10px 0;}
-    #section3 .inner .about-box-cont ul li > p{font-size: 15px;}
-    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 19px;}
-    #section3 .inner .about-box-cont ul li > div span{font-size: 15px;}
+    #section3 .inner .about-box-cont ul li > p{font-size: 14px;}
+    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 18px;}
+    #section3 .inner .about-box-cont ul li > div span{font-size: 14px;}
     #section3 .inner .about-box-cont ul li.etc{font-size: 13px;padding: 8px 0 0;}
 
 
