@@ -659,7 +659,6 @@ div.btn:hover{
 
     #section3 .inner .introduction-container{
         padding: 10px 0;
-        
     }
 
     /* TXT 박스--------------------------------- */
@@ -1019,6 +1018,13 @@ div.btn:hover{
     #section3 .inner .arrange-box{
         width: 93%;
     }
+
+    /* 자기소개 박스--------------------------------- */
+    #section3 .inner .introduction-container p{
+        color: #fff;
+        font-size: 16px;
+    }
+        
     #section3 .inner .about-container{
         display: flex;
         flex-flow: row nowrap;
@@ -1028,21 +1034,23 @@ div.btn:hover{
     #section3 .inner .about-box-cont{
         padding: 0 30px ;
     }
-    #section3 .inner .about-box-cont h3{font-size: 27px;}
+    #section3 .inner .about-box-cont h3{font-size: 29px;}
     #section3 .inner .about-box-cont h3::after{width: 58%;}
     #section3 .inner .license-box h3::after{width: 66%;}
-    #section3 .inner .about-box-cont ul{padding: 20px 0;}
-    #section3 .inner .about-box-cont ul li{padding: 8px 0;}
-    #section3 .inner .about-box-cont ul li > p{font-size: 11px;}
-    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 16px;}
-    #section3 .inner .about-box-cont ul li > div span{font-size: 11px;}
-    #section3 .inner .about-box-cont ul li.etc{font-size: 11px;padding: 8px 0 0;}
+    #section3 .inner .about-box-cont ul{padding: 18px 0;}
+    #section3 .inner .about-box-cont ul li{padding: 10px 0;}
+    #section3 .inner .about-box-cont ul li > p{font-size: 15px;}
+    #section3 .inner .about-box-cont ul li > div p:first-child{font-size: 19px;}
+    #section3 .inner .about-box-cont ul li > div span{font-size: 15px;}
+    #section3 .inner .about-box-cont ul li.etc{font-size: 13px;padding: 8px 0 0;}
 
 
     #section3 img.pc-about{
         width: 700px;
         height: auto;
     }
+
+
 
 
     /* ===================PC-footer=================== */
