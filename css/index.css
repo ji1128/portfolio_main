@@ -758,7 +758,7 @@ div.btn:hover{
         letter-spacing: 0.5px;
     }
     #section3 .footer-inner .copyright-box > a{
-        text-align: right;
+        text-align: center;
         font-weight: 900;
         /* position: absolute;
         right: 0;
@@ -1104,14 +1104,23 @@ div.btn:hover{
     }
     #section3 .footer-inner .copyright-box{width: 100%;}
 
-
-
-
-
-
-
-
-
-
+    footer .copyright-box > a{
+        text-align: right;
+        
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        width: 280px;height: 90px;
+        color: #fff;
+        background-color: #000;
+        border-radius: 50px;
+        padding-top: 35px;
+        font-size: 20px;
+    }
+    footer .copyright-box > a:hover{
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+    
 
 }
