@@ -58,12 +58,6 @@ $(document).ready(function () {
     });
 
 
-    // skill -----------------------------
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1300
-    });
-
 
     // scroll-spy -----------------------------
     //Masgic Scroll---------------------
