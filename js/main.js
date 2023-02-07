@@ -37,14 +37,13 @@ $(document).ready(function () {
     // swiper slide -----------------------------
     var swiper = new Swiper(".portfolio-part .mySwiper", {
         direction: "horizontal", //vertical-좌우 슬라이딩, horizontal-상하 슬라이딩
-        pagination: {
-            el: ".portfolio-part .swiper-pagination",
-            clickable: true,
-        },
-        debugger: true, //드래그 기능
-        mousewheel: true, //마우스 휠 기능
         loop: true, //반복 기능
         autoplay: true, //자동재생
+        slidesPerView: 1, //한 번에 보여줄 슬라이드 개수
+        slidesPerGroup: 1, //슬라이드 넘길 때 이동 갯수
+        allowTouchMove: true, // 마우스로 스와이핑
+
+
         speed: 1100, //스크롤 속도
         //자동 스크를링
         autoplay: { //자동슬라이드 (false-비활성화)
@@ -55,6 +54,20 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {
+            el: ".portfolio-part .swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    // slide에 마우스 hover시 자동 재생 멈춤
+    $(".portfolio-part .mySwiper").each(function(elem, target){
+        var swp = target.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
     });
 
 
