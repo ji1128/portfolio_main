@@ -7,7 +7,7 @@
         display: none; /* 스크롤 투명하게 */
     }
 
-/* #section2 h3{display: none;} */
+
 #section0 {
     background: url(../images/bg/pc-bg.png) no-repeat;
     background-position: left center;
@@ -228,7 +228,7 @@ div.btn:hover{
     position: relative; /* 하위 컨텐츠 정렬 기준*/
 }
 /* 제목--------------------------------- */
-#section0 h1{
+#section0 h2{
     font-size: 50px;
     color: #fff;
     font-weight: 900;
@@ -247,9 +247,8 @@ div.btn:hover{
     border-right: 0.05em solid #F81857; /*타이핑 커서 색상*/
     animation: cursor 0.5s ease infinite; /*위에서 지정한 cursor 키프레임 애니메이션을 반복해서 실행되게 함*/
 }
-#section0 .inner h3{
+#section0 .inner .txt{
     color: #fff;
-
     font-weight: 100;
     font-size: 23px;
 }
@@ -893,8 +892,8 @@ div.btn:hover{
         margin: 0 20%;
         height: 55vh;
     }
-    #section0 h1{font-size: 4.5vw;}
-    #section0 .inner h3{font-size: 1.7vw;}
+    #section0 h2{font-size: 4.5vw;}
+    #section0 .inner .txt{font-size: 1.7vw;}
 
     #section0 .inner .introduction span{font-size: 140px;}
     #section0 .inner .introduction ul li{font-size: 23px;}
